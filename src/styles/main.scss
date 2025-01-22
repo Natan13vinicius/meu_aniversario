@@ -1,0 +1,33 @@
+@use "hero";
+@use "components/infos_bar";
+@use "components/buttons";
+@use "event";
+@use "variables";
+
+@font-face {
+  font-family: CookGothif;
+  src: url(./fontes/CookGothif.otf) format("opentype");
+  font-weight: lighter;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: variables.$textColor;
+  list-style: none;
+}
+
+.container {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (max-width: 640px) {
+    max-width: 80%;
+  }
+
+  @media (max-width: 1024px) {
+    max-width: 90%;
+  }
+}

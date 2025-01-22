@@ -1,0 +1,122 @@
+@use "variables";
+
+.event {
+  position: relative;
+  padding: 80px 0;
+
+  &--frontend {
+    background-image: linear-gradient(
+      variables.$secondaryTextColor,
+      variables.$purple
+    );
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("../imagens/3b.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.1; // Ajusta apenas a opacidade da imagem
+      z-index: 1; // Certifique-se de que o conteúdo principal não seja coberto
+    }
+  }
+
+  &--ui-ux {
+    background-image: linear-gradient(
+      variables.$grey,
+      variables.$secondaryTextColor
+    );
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("../imagens/background/Halftone\ Background_09.jpg");
+      background-size: cover;
+      background-position: center;
+      opacity: 0.1; // Ajusta apenas a opacidade da imagem
+      z-index: 1; // Certifique-se de que o conteúdo principal não seja coberto
+    }
+  }
+
+  &--data-science {
+    background-image: linear-gradient(
+      variables.$secondaryTextColor,
+      variables.$purple
+    );
+  }
+
+  &--backend {
+    background-image: linear-gradient(
+      variables.$secondaryTextColor,
+      variables.$grey
+    );
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("../imagens/background/Halftone\ Background_10.jpg");
+      background-size: cover;
+      background-position: center;
+      opacity: 0.1; // Ajusta apenas a opacidade da imagem
+      z-index: 1; // Certifique-se de que o conteúdo principal não seja coberto
+    }
+  }
+
+  &--image-left {
+    .container {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .container {
+    display: flex;
+    gap: 40px;
+  }
+
+  &__image {
+    max-width: 360px;
+  }
+
+  &__details {
+    &__title {
+      font-family: CookGothif;
+      font-weight: lighter;
+
+      font-size: 45px;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+
+    &__description {
+      line-height: 22px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .container {
+      display: block;
+    }
+
+    &__image {
+      width: 100%;
+    }
+
+    &__details {
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
+  }
+}
