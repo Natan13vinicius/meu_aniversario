@@ -25,6 +25,8 @@
   }
 
   &__text {
+    overflow: hidden;
+
     font-family: CookGothif;
 
     margin-top: 64px;
@@ -49,7 +51,7 @@
     }
 
     &__text {
-      font-size: 22px;
+      font-size: 30px;
       line-height: 24px;
       margin: 24px 0;
     }
